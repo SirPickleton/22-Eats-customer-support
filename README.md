@@ -1,2 +1,2 @@
-# 22-Eats-customer-support
-Call center for a food delivery service
+# Cosc 320 Individual Project
+
