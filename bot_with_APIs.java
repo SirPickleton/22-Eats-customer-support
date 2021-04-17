@@ -172,6 +172,9 @@ public class bot_with_APIs extends JFrame{
 						e.printStackTrace();
 					}
 				}
+				else if (gtext.contains("menuf")) {
+					issuesmenuf();
+				}
 				
 				
 				
@@ -232,6 +235,7 @@ public class bot_with_APIs extends JFrame{
 				
 				//English
 				else if(gtext.contains("hi") || gtext.contains("english")) {
+					french = false;
 					bot("Hello, Welcome to T22 Eats Customer Support! Are you an existing member?");
 				}
 				else if(gtext.contains("yes")) {
@@ -395,8 +399,7 @@ public class bot_with_APIs extends JFrame{
 	private static void bot(String s) {
 		textarea.append("Bot ->" + s + " \n");
 	}
-	public static void issuesmenu () {
-		if(french = true) {
+	public static void issuesmenuf () {
 			bot("1f: nourriture manquante");
 			bot("2f: livraison tardive");
 			bot("3f: qualité de la nourriture");
@@ -404,8 +407,9 @@ public class bot_with_APIs extends JFrame{
 			bot("5f: l'application ne fonctionne pas");
 			bot("6f: autre");
 			bot("0f: sortir");
-		}
-		else {
+	}
+	public static void issuesmenu () {
+		
 			bot("1: missing food");
 			bot("2: late delivery");
 			bot("3: quality of food");
@@ -413,7 +417,6 @@ public class bot_with_APIs extends JFrame{
 			bot("5: the app isn't working");
 			bot("6: other");
 			bot("0: exit");
-		}
 	}
 	
 	public void saveBalance(int bal) throws IOException {
